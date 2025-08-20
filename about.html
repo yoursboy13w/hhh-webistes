@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Home Happiness Hub</title>
+  <meta name="description" content="Discover Home Happiness Hub – your go-to source for tips, inspiration, and insights to make your home and life happier. Learn about our mission, values, and the team behind the hub.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/logo.png" type="image/png">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://www.homehappinesshub.com/about">
+
+  <!-- Alternate Language Links -->
+  <link rel="alternate" href="https://www.homehappinesshub.com/" hreflang="en">
+  <link rel="alternate" href="https://www.homehappinesshub.com/np/" hreflang="ne">
+
+  <!-- Open Graph Meta Tags for Facebook & LinkedIn -->
+  <meta property="og:title" content="About Us - Home Happiness Hub">
+  <meta property="og:description" content="Learn more about Home Happiness Hub – your source for tips, insights, and inspiration to create a happier home and lifestyle.">
+  <meta property="og:image" content="https://www.homehappinesshub.com/assets/logo.png">
+  <meta property="og:url" content="https://www.homehappinesshub.com/about">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Home Happiness Hub">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@HomeHappinessHub">
+  <meta name="twitter:title" content="About Us - Home Happiness Hub">
+  <meta name="twitter:description" content="Discover the mission and team behind Home Happiness Hub, your go-to source for tips and inspiration to make life and home happier.">
+  <meta name="twitter:image" content="https://www.homehappinesshub.com/assets/logo.png">
+
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="Home Happiness Hub RSS" href="https://www.homehappinesshub.com/feed/rss">
+
+  <!-- Windows Tile Meta -->
+  <meta name="msapplication-TileImage" content="./assets/tile-icon.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+
+  <!-- Apple Web App Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Home Happiness Hub">
+  <link rel="apple-touch-icon" href="./assets/logo.png">
+
+  <!-- External Resources -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+
+
+
+
+  <style>
+    :root {
+      --gold: #D4AF37;
+      --dark: #1A1A1A;
+      --cream: #FFFAF0;
+      --red: #ff4444;
+      --font-primary: 'Playfair Display', serif;
+      --font-secondary: 'Montserrat', sans-serif;
+      --container-padding: clamp(20px, 5vw, 50px);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+
+    .wrapper {
+      width: 100%;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--cream);
+      overflow-x: hidden;
+    }
+
+    nav {
+      background: rgba(26, 26, 26, 0.95);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .nav-content {
+      display: flex;
+      flex-direction: row;
+
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0px 20px;
+      gap: 90px;
+    }
+
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      background: var(--gold);
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transform-style: preserve-3d;
+      filter: brightness(1.2) contrast(1.2);
+    }
+
+    .logo.logged-in {
+      animation: logoTransform 8s ease-in-out forwards, logoDistort 4s ease-in-out forwards;
+    }
+
+    @keyframes logoTransform {
+      0% {
+        transform: rotate(0deg) scale(1) skew(0deg, 0deg) translateZ(0);
+        background: var(--gold);
+      }
+
+      25% {
+        transform: rotate(90deg) scale(1.1) skew(10deg, 10deg) translateZ(30px);
+        background: #ff4b5c;
+      }
+
+      50% {
+        transform: rotate(180deg) scale(1.2) skew(-10deg, -10deg) translateZ(60px);
+        background: #4b5cff;
+      }
+
+      75% {
+        transform: rotate(270deg) scale(1.1) skew(10deg, -10deg) translateZ(30px);
+        background: #fff34b;
+      }
+
+      100% {
+        transform: rotate(360deg) scale(1) skew(0deg, 0deg) translateZ(0);
+        background: var(--gold);
+      }
+    }
+
+    @keyframes logoDistort {
+      0% {
+        transform: scale(1) rotateX(0deg) rotateY(0deg) translateZ(0);
+      }
+
+      50% {
+        transform: scale(1.3) rotateX(360deg) rotateY(360deg) translateZ(100px);
+      }
+
+      100% {
+        transform: scale(1) rotateX(720deg) rotateY(720deg) translateZ(0);
+      }
+    }
+
+    .logo:hover {
+      animation-play-state: paused;
+
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      animation: imgSpin 10s linear infinite, imgPop 2s ease-in-out infinite;
+    }
+
+    @keyframes imgSpin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+
+    @keyframes imgPop {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .book-now {
+      background: var(--gold);
+      color: var(--dark);
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid var(--gold);
+
+    }
+
+    .book-now:hover {
+      background: var(--red);
+      color: white;
+      border-color: var(--red);
+      box-shadow: 0 0 20px rgba(255, 68, 68, 0.3);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--cream);
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      position: relative;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      z-index: 1001;
+      width: 30px;
+      height: 20px;
+      position: relative;
+    }
+
+    .hamburger span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: var(--gold);
+      transition: 0.3s all ease-in-out;
+    }
+
+    .hamburger span:nth-child(1) {
+      top: 0;
+    }
+
+    .hamburger span:nth-child(2) {
+      top: 9px;
+    }
+
+    .hamburger span:nth-child(3) {
+      top: 18px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 9px;
+    }
+
+
+
+    .navi {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      gap: 80px;
+    }
+
+
+
+
+    /* Add these mobile responsive styles */
+    @media screen and (max-width: 768px) {
+
+
+      .navi {
+
+        position: absolute;
+        font-size: 0.6rem;
+        left: 0;
+        width: 100%;
+
+
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+      .navi.active {
+        display: flex;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      .nav-links a {
+        margin: 10px 0;
+      }
+
+      #company_phone {
+        color: var(--cream);
+        transition: color 0.3s ease;
+        gap: 5px;
+      }
+
+      #company_phone:hover {
+        color: var(--gold);
+      }
+
+
+    }
+
+    /* Add hover effect for phone number in desktop view */
+    #company_phone {
+      transition: color 0.3s ease;
+    }
+
+    #company_phone:hover {
+      color: var(--gold) !important;
+    }
+
+
+
+    
+    :root {
+    --luxury-gold: #D4AF37;
+    --deep-charcoal: #1E1E1E;
+    --soft-cream: #F5F5F5;
+    --elegant-black: #121212;
+    --subtle-shadow: rgba(0, 0, 0, 0.1);
+}
+
+
+
+ 
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(
+        135deg, 
+        rgba(212, 175, 55, 0.8), 
+        rgba(26, 26, 26, 0.9)
+    ), url('./assets/e.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--cream);
+    overflow: hidden;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    padding: 50px;
+    max-width: 800px;
+   
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    animation: bannerFadeIn 1.5s ease-out;
+}
+
+.banner-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    color: var(--gold) !important;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content .tagline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+@keyframes bannerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 3rem;
+    }
+
+    .banner-content .tagline {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* About Section */
+.about-section {
+    background: linear-gradient(135deg, var(--soft-cream) 0%, #FFFFFF 100%);
+    font-family: 'Playfair Display', serif;
+    padding: var(--container-padding);
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: clamp(30px, 5vw, 60px);
+    position: relative;
+    padding: 0 var(--container-padding);
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    width: min(200px, 80%);
+    height: 2px;
+    background: var(--luxury-gold);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--elegant-black);
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin-bottom: clamp(15px, 3vw, 20px);
+}
+
+.about-hero p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--deep-charcoal);
+    max-width: min(800px, 90%);
+    margin: 0 auto;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Story Section */
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+    gap: clamp(30px, 5vw, 60px);
+    align-items: center;
+    margin-bottom: clamp(40px, 8vw, 80px);
+    padding: 0 var(--container-padding);
+}
+
+.story-image {
+    position: relative;
+    overflow: hidden;
+    width: min(400px, 100%);
+    aspect-ratio: 1;
+    margin: 0 auto;
+    transition: transform 0.6s ease;
+}
+
+.story-image:hover {
+    transform: scale(1.03);
+}
+
+.story-image img {
+    width: 337px;
+    height: 356px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.6s ease;
+}
+
+.story-content {
+    padding: clamp(15px, 3vw, 30px);
+}
+
+.story-content h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--elegant-black);
+    margin-bottom: clamp(20px, 4vw, 30px);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.story-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 32%;
+   
+    height: 3px;
+    background: var(--luxury-gold);
+}
+
+.story-content p {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    color: var(--deep-charcoal);
+    line-height: 2;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Stats Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: clamp(20px, 3vw, 30px);
+    text-align: center;
+    margin-bottom: clamp(40px, 8vw, 80px);
+    padding: 0 var(--container-padding);
+}
+
+.stat-card {
+    background: white;
+    padding: clamp(20px, 4vw, 40px);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px var(--subtle-shadow);
+    transition: all 0.5s ease;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--luxury-gold);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.stat-card p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: var(--deep-charcoal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+
+
+/* Features Section */
+.features-section {
+    background: var(--soft-cream);
+    padding: clamp(40px, 8vw, 80px) var(--container-padding);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(20px, 3vw, 30px);
+}
+
+.feature-card {
+    background: var(--luxe-white);
+    padding: clamp(20px, 4vw, 30px);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--subtle-shadow);
+    transition: transform 0.4s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 20px;
+}
+
+/* Awards Section */
+.awards-section {
+    background: linear-gradient(45deg, var(--soft-cream), var(--luxe-white));
+    padding: clamp(40px, 8vw, 80px) var(--container-padding);
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(20px, 3vw, 30px);
+}
+
+.award-card {
+    background: var(--luxe-white);
+    padding: clamp(20px, 4vw, 30px);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px var(--subtle-shadow);
+    transition: all 0.4s ease;
+}
+
+.award-card:hover {
+    transform: scale(1.05);
+}
+
+.award-icon {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 20px;
+}
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    padding: clamp(30px, 5vw, 50px) var(--container-padding);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: clamp(20px, 5%, 50%);
+    width: 2px;
+    height: 100%;
+    background: var(--elegant-gold);
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    margin-left: clamp(30px, 8%, 50%);
+    margin-bottom: clamp(20px, 4vw, 40px);
+}
+
+.timeline-content {
+    width: 100%;
+    max-width: 600px;
+    padding: clamp(15px, 3vw, 20px);
+    background: var(--luxe-white);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px var(--subtle-shadow);
+}
+
+.timeline-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(30px, 6vw, 50px);
+    height: clamp(30px, 6vw, 50px);
+    background: var(--elegant-gold);
+    border-radius: 50%;
+    color: var(--luxe-white);
+}
+
+/* Values Section */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: clamp(20px, 3vw, 30px);
+    padding: 0 var(--container-padding);
+}
+
+.value-card {
+    background: var(--luxe-white);
+    padding: clamp(20px, 4vw, 30px);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px var(--subtle-shadow);
+    transition: transform 0.4s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-icon {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 20px;
+}
+
+/* Expertise Section */
+.expertise-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(20px, 3vw, 30px);
+    padding: 0 var(--container-padding);
+}
+
+.expertise-card {
+    background: var(--luxe-white);
+    padding: clamp(20px, 4vw, 30px);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px var(--subtle-shadow);
+}
+
+.expertise-level {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    color: var(--elegant-gold);
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 10px;
+    background: var(--soft-cream);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--elegant-gold);
+}
+
+/* Certifications Section */
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: clamp(20px, 3vw, 30px);
+    padding: 0 var(--container-padding);
+}
+
+.certification-card {
+    background: var(--luxe-white);
+    padding: clamp(20px, 4vw, 30px);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px var(--subtle-shadow);
+    transition: transform 0.4s ease;
+}
+
+.certification-card:hover {
+    transform: scale(1.05);
+}
+
+.certification-icon {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 20px;
+    color: var(--elegant-gold);
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: clamp(10px, 2vw, 20px);
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: var(--deep-charcoal);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--elegant-gold);
+}
+
+/* General Media Queries for Edge Cases */
+@media (max-width: 480px) {
+    .about-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .team-image img {
+        height: 250px;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .story-content {
+        text-align: center;
+    }
+    
+    .story-content h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+    footer {
+      background: #000000;
+      color: var(--cream);
+      padding: 60px 0 0;
+      border-top: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .footer-section {
+      margin-bottom: 30px;
+    }
+
+    .footer-section h3 {
+      color: var(--gold);
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-section h3::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .footer-section p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--cream);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+      transform: translateX(5px);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      color: var(--cream);
+      background: rgba(212, 175, 55, 0.1);
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .social-links a:hover {
+      color: var(--gold);
+      background: rgba(212, 175, 55, 0.2);
+      transform: translateY(-3px);
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+    }
+
+    .contact-info i {
+      color: var(--gold);
+      margin-right: 10px;
+      width: 20px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      background: rgba(26, 26, 26, 0.5);
+      color: var(--cream);
+      border-radius: 4px;
+    }
+
+    .newsletter-form button {
+      padding: 10px 5px;
+      background: var(--gold);
+      border: none;
+      border-radius: 4px;
+      color: var(--dark);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+
+    .footer-bottom {
+      background: #000000;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .footer-bottom-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom p {
+      color: rgba(255, 250, 240, 0.7);
+      font-size: 0.85rem;
+      margin: 0;
+    }
+
+    .designer-credit {
+      color: var(--cream);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .designer-credit:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 968px) {
+      .nav-content {
+        justify-content: space-between;
+      }
+
+      .hamburger {
+        display: block;
+        order: 3;
+      }
+
+      .logo {
+        order: 1;
+      }
+
+
+      .book-now {
+        order: 2;
+        margin: 0;
+        padding: 8px 20px;
+        font-size: 0.85rem;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background: rgba(26, 26, 26, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.5s all ease-in-out;
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .nav-links a {
+        margin: 15px 0;
+        font-size: 1.2rem;
+        opacity: 0;
+        transform: translateX(50px);
+      }
+
+      .nav-links.active a {
+        opacity: 1;
+        transform: translateX(0);
+        transition: 0.3s all ease-in-out;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+
+      .contact-info {
+        justify-content: center;
+      }
+
+      .footer-links a:hover {
+        transform: translateX(0) scale(1.1);
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+
+    @media (min-width: 969px) {
+      .nav-links {
+        order: 2;
+      }
+
+      .book-now {
+        order: 3;
+      }
+    }
+    a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-content">
+      <div class="logo">
+        <img src="./assets/logoooooooooo.jpg" alt="Logo">
+      </div>
+      <div class="navi">
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="Products.html">Products</a>
+          <a href="team.html">Team</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div style="gap: 20px; display: flex; align-items: center;">
+          <a href="tel:+9779851051578" id="company_phone" style="color: whitesmoke; text-decoration: none;"> <i
+              class="fas fa-phone"></i>
+           9802644327 </a>
+          <a href="book.html" class="book-now">Book Now</a>
+        </div>
+
+      </div>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+  <!-- Banner Section -->
+  <section class="banner">
+    <div class="banner-content">
+      <br>
+      <br>
+      <h1 style="color: red;">About-Us</h1>
+<p class="tagline">Making Your Home and Life Happier, One Idea at a Time</p>
+
+
+    </div>
+  </section>
+
+
+
+
+  <br>
+  <br>
+
+  <section class="about-section ">
+    <div class="container">
+      <!-- Hero Section -->
+      <div class="about-hero">
+       <h1>Our Journey</h1>
+<p>At Home Happiness Hub, we craft beautiful and functional furniture that transforms houses into warm, inviting homes. Our dedication to quality and style ensures every piece brings comfort and happiness to your space.</p>
+
+      </div>
+
+      <!-- Story Grid -->
+      <div class="story-grid ">
+        <div class="story-image">
+          <img src="./assets/logoooooooooo.jpg" alt="Our Story">
+        </div>
+        <div class="story-content">
+          <h2>Our Story</h2>
+<p>Our journey began with a vision to bring style, comfort, and happiness into every home. With dedication and craftsmanship, we've become a trusted choice for beautiful and functional furniture.</p>
+<p>Every home has its own story, and we take pride in helping create spaces where families and friends can make lasting memories.</p>
+
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+  <div class="stat-card">
+    <h3>1200+</h3>
+    <p>Furniture Pieces Crafted</p>
+  </div>
+  <div class="stat-card">
+    <h3>3000+</h3>
+    <p>Happy Homes</p>
+  </div>
+  <div class="stat-card">
+    <h3>50+</h3>
+    <p>Design Awards Won</p>
+  </div>
+  <div class="stat-card">
+    <h3>5000+</h3>
+    <p>Hours of Craftsmanship</p>
+  </div>
+</div>
+
+
+
+
+
+
+    <!-- Features Section -->
+<section class="features-section">
+  <div class="container">
+    <h2 style="text-align: center; font-size: 3rem; margin-bottom: 7px;">Why Choose Us</h2>
+    <br>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon" style="color: brown;">★</div>
+        <h3>Premium Quality</h3>
+        <p>We craft furniture with the finest materials and attention to detail, ensuring every piece adds lasting beauty to your home.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⏰</div>
+        <h3>Timely Delivery</h3>
+        <p>We respect your time and guarantee prompt delivery so your home transformation happens exactly when planned.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">❤️</div>
+        <h3>Passionate Craftsmanship</h3>
+        <p>Our skilled team pours passion into every design, creating furniture that blends style, comfort, and durability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+      <!-- Awards Section -->
+   <section class="awards-section">
+  <div class="container">
+    <h2 style="text-align: center; font-size: 3rem; margin-bottom: 7px;">Awards & Recognition</h2>
+    <br>
+    <div class="awards-grid">
+      <div class="award-card">
+        <div class="award-icon">🏆</div>
+        <h3>Best Furniture Design</h3>
+        <p>Recognized for exceptional design and craftsmanship in home furniture.</p>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🌟</div>
+        <h3>Service Excellence</h3>
+        <p>Awarded for outstanding customer service and creating happy homes.</p>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🎖️</div>
+        <h3>Innovation in Home Decor</h3>
+        <p>Honored for introducing creative and functional furniture solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<br>
+
+
+     
+<br>
+      <!-- Values Section -->
+    
+
+
+      <section class="values-section">
+  <div class="container">
+    <h2 style="text-align: center; font-size: 3rem; margin-bottom: 7px;">Our Core Values</h2>
+    <br>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">💫</div>
+        <div>
+          <h3>Quality Craftsmanship</h3>
+          <p>We create furniture with precision and care, ensuring every piece meets the highest standards.</p>
+        </div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <div>
+          <h3>Integrity</h3>
+          <p>We uphold honesty and transparency in every interaction, building trust with our clients.</p>
+        </div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">💡</div>
+        <div>
+          <h3>Innovation</h3>
+          <p>We design unique and functional furniture solutions that enhance modern living spaces.</p>
+        </div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">❤️</div>
+        <div>
+          <h3>Passion for Homes</h3>
+          <p>Our team brings dedication and enthusiasm to every project, creating furniture that brings joy to homes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <br>
+      <br>
+<br>
+      <!-- Expertise Section -->
+    <section class="expertise-section">
+  <div class="container">
+    <h2 style="text-align: center; font-size: 3rem; margin-bottom: 7px;">Our Expertise</h2>
+    <br>
+    <div class="expertise-container">
+      <div class="expertise-card">
+        <div class="expertise-level">100%</div>
+        <h3>Custom Furniture Design</h3>
+        <p>Creating unique and stylish furniture tailored to your home.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%"></div>
+        </div>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-level">100%</div>
+        <h3>Woodworking & Craftsmanship</h3>
+        <p>Expertly handcrafted pieces with attention to every detail.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%"></div>
+        </div>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-level">100%</div>
+        <h3>Home Decor Styling</h3>
+        <p>Designing beautiful and functional spaces with our furniture.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+
+<br>
+      <!-- Certifications Section -->
+    <section class="certifications-section">
+  <div class="container">
+    <h2 style="text-align: center; font-size: 3rem; margin-bottom: 7px;">Our Promise</h2>
+    <div class="certification-grid">
+      <div class="certification-card">
+        <div class="certification-icon">🏠</div>
+        <h3>Quality Assurance</h3>
+        <p>We ensure every piece of furniture meets our high-quality standards for durability and style.</p>
+      </div>
+      <div class="certification-card">
+        <div class="certification-icon">⏱️</div>
+        <h3>Timely Delivery</h3>
+        <p>Your furniture will arrive on time, ready to enhance your home.</p>
+      </div>
+      <div class="certification-card">
+        <div class="certification-icon">🛠️</div>
+        <h3>Expert Craftsmanship</h3>
+        <p>Every product is handcrafted with precision and attention to detail.</p>
+      </div>
+      <div class="certification-card">
+        <div class="certification-icon">❤️</div>
+        <h3>Customer Satisfaction</h3>
+        <p>Our goal is to bring happiness and comfort to every home we serve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<br>
+<br>
+
+    
+
+  <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            We are dedicated to providing exceptional services with a focus on
+            quality and customer satisfaction. Our experienced team ensures the
+            best results for all your needs.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/share/1JSu7aJEAJ/?mibextid=wwXIfr"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@home.happiness.hu?_t=ZS-8yzvmHPOw7z&_r=1" target="_blank">
+  <i class="fab fa-tiktok"></i>
+</a>
+
+            <a href="https://www.instagram.com/homehappinesshub?igsh=dGx4N3plMGk5bHV3" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="homehappinesshub@gmail.com" target="_blank">
+              <i class="fab fa-google"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="event.html">Product</a></li>
+            <li><a href="services.html">Team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <div class="contact-info">
+            <p>Phone: 9802644327</p>
+          </div>
+          <div class="contact-info">
+            <p>Email: homehappinesshub@gmail.com</p>
+          </div>
+          <div class="contact-info">
+            <p>Address: Gaindakot-5, Nawalpur</p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Our Location</h3>
+          <div class="map">
+           <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1598.3174166244012!2d84.39731851506363!3d27.705042323900837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994fb0052b0acef%3A0x2adc81c3edfb33d4!2sKumari%20Bank%20Ltd!5e1!3m2!1sen!2snp!4v1755616935111!5m2!1sen!2snp"
+  width="100%"
+  height="200"
+  style="border: 0"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 Your HomeHappinessHub. All rights reserved.</p>
+          <p>
+            <span>Designed by</span>
+            <a
+              href="https://himalshahithakuri.com.np/"
+              target="_blank"
+              class="designer-credit"
+              >Himal shahi Thakuri</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+      <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          navLinks.classList.toggle('active');
+        });
+
+        // Add sticky navbar functionality
+        window.addEventListener('scroll', () => {
+          const nav = document.querySelector('nav');
+          if (window.scrollY > 0) {
+            nav.classList.add('sticky');
+          } else {
+            nav.classList.remove('sticky');
+          }
+        });
+
+
+
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const counters = document.querySelectorAll(".stat-item h3");
+
+          counters.forEach(counter => {
+            const target = +counter.getAttribute("data-target"); // Get target value
+            const increment = target / 200; // Adjust speed of counting
+
+            const updateCounter = () => {
+              const current = +counter.innerText;
+
+              if (current < target) {
+                counter.innerText = Math.ceil(current + increment); // Update number
+                setTimeout(updateCounter, 10); // Adjust speed
+              } else {
+                counter.innerText = target; // Ensure it ends exactly at the target
+              }
+            };
+
+            updateCounter(); // Start the counter
+          });
+        });
+
+
+
+
+
+
+      </script>
+</body>
+
+</html>

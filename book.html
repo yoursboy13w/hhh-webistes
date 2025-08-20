@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an Event - Home Happiness Hub</title>
+  <meta
+    name="description"
+    content="Book your next event with Home Happiness Hub. We specialize in corporate and private events, providing expert planning and management."
+  />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/logo.jpg" type="image/png" />
+
+  <!-- Alternate Language Links -->
+  <link rel="alternate" href="https://www.homehappinesshub.com/" hreflang="en" />
+  <link rel="alternate" href="https://www.homehappinesshub.com/np/" hreflang="ne" />
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://www.homehappinesshub.com/book" />
+
+  <!-- Facebook Open Graph Meta Tags -->
+  <meta property="og:title" content="Book an Event - Home Happiness Hub" />
+  <meta
+    property="og:description"
+    content="Book your next event with Home Happiness Hub. We specialize in corporate events, private parties, weddings, and more with professional planning and management."
+  />
+  <meta property="og:image" content="https://www.homehappinesshub.com/assets/logo.jpg" />
+  <meta property="og:url" content="https://www.homehappinesshub.com/book.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Home Happiness Hub" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@HomeHappinessHub" />
+  <meta name="twitter:title" content="Book an Event - Home Happiness Hub" />
+  <meta
+    name="twitter:description"
+    content="Book your next event with Home Happiness Hub. We specialize in corporate events, private parties, weddings, and more with professional planning and management."
+  />
+  <meta name="twitter:image" content="https://www.homehappinesshub.com/assets/logo.jpg" />
+  <meta name="twitter:url" content="https://www.homehappinesshub.com/book.html" />
+
+  <!-- RSS Feed -->
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Home Happiness Hub Blog RSS"
+    href="https://www.homehappinesshub.com/feed/rss"
+  />
+
+  <!-- Windows Tile Meta Tags -->
+  <meta name="msapplication-TileImage" content="./assets/tile-icon.png" />
+  <meta name="msapplication-TileColor" content="#000000" />
+
+  <!-- Apple Web App Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Home Happiness Hub" />
+  <link rel="apple-touch-icon" href="./assets/logo.jpg" />
+
+  <!-- External Resources -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+
+    <style>
+      :root {
+        --gold: #d4af37;
+        --dark: #1a1a1a;
+        --cream: #fffaf0;
+        --red: #ff4444;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: var(--cream);
+        overflow-x: hidden;
+      }
+
+      nav {
+        background: rgba(26, 26, 26, 0.95);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .nav-content {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0px 20px;
+        gap: 90px;
+      }
+
+      .logo {
+        width: 60px;
+        height: 60px;
+        background: var(--gold);
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transform-style: preserve-3d;
+        filter: brightness(1.2) contrast(1.2);
+      }
+
+      .logo.logged-in {
+        animation: logoTransform 8s ease-in-out forwards,
+          logoDistort 4s ease-in-out forwards;
+      }
+
+      @keyframes logoTransform {
+        0% {
+          transform: rotate(0deg) scale(1) skew(0deg, 0deg) translateZ(0);
+          background: var(--gold);
+        }
+
+        25% {
+          transform: rotate(90deg) scale(1.1) skew(10deg, 10deg)
+            translateZ(30px);
+          background: #ff4b5c;
+        }
+
+        50% {
+          transform: rotate(180deg) scale(1.2) skew(-10deg, -10deg)
+            translateZ(60px);
+          background: #4b5cff;
+        }
+
+        75% {
+          transform: rotate(270deg) scale(1.1) skew(10deg, -10deg)
+            translateZ(30px);
+          background: #fff34b;
+        }
+
+        100% {
+          transform: rotate(360deg) scale(1) skew(0deg, 0deg) translateZ(0);
+          background: var(--gold);
+        }
+      }
+
+      @keyframes logoDistort {
+        0% {
+          transform: scale(1) rotateX(0deg) rotateY(0deg) translateZ(0);
+        }
+
+        50% {
+          transform: scale(1.3) rotateX(360deg) rotateY(360deg)
+            translateZ(100px);
+        }
+
+        100% {
+          transform: scale(1) rotateX(720deg) rotateY(720deg) translateZ(0);
+        }
+      }
+
+      .logo:hover {
+        animation-play-state: paused;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        animation: imgSpin 10s linear infinite, imgPop 2s ease-in-out infinite;
+      }
+
+      @keyframes imgSpin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+
+      @keyframes imgPop {
+        0% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.2);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .book-now {
+        background: var(--gold);
+        color: var(--dark);
+        padding: 10px 25px;
+        text-decoration: none;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid var(--gold);
+      }
+
+      .book-now:hover {
+        background: var(--red);
+        color: white;
+        border-color: var(--red);
+        box-shadow: 0 0 20px rgba(255, 68, 68, 0.3);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: var(--cream);
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        position: relative;
+        padding: 5px 0;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--gold);
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--gold);
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        z-index: 1001;
+        width: 30px;
+        height: 20px;
+        position: relative;
+      }
+
+      .hamburger span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: var(--gold);
+        transition: 0.3s all ease-in-out;
+      }
+
+      .hamburger span:nth-child(1) {
+        top: 0;
+      }
+
+      .hamburger span:nth-child(2) {
+        top: 9px;
+      }
+
+      .hamburger span:nth-child(3) {
+        top: 18px;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 9px;
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 9px;
+      }
+
+      .navi {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        gap: 80px;
+      }
+      @media (max-width: 968px) {
+        .nav-content {
+          justify-content: space-between;
+        }
+
+        .hamburger {
+          display: block;
+          order: 3;
+        }
+
+        .logo {
+          order: 1;
+        }
+
+        .book-now {
+          order: 2;
+          margin: 0;
+          padding: 8px 20px;
+          font-size: 0.85rem;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          height: 100vh;
+          width: 100%;
+          background: rgba(26, 26, 26, 0.98);
+          flex-direction: column;
+          justify-content: center;
+          transition: 0.5s all ease-in-out;
+        }
+
+        .nav-links.active {
+          right: 0;
+        }
+
+        .nav-links a {
+          margin: 15px 0;
+          font-size: 1.2rem;
+          opacity: 0;
+          transform: translateX(50px);
+        }
+
+        .nav-links.active a {
+          opacity: 1;
+          transform: translateX(0);
+          transition: 0.3s all ease-in-out;
+        }
+      }
+
+      /* Add these mobile responsive styles */
+      @media screen and (max-width: 768px) {
+        .navi {
+          position: absolute;
+          font-size: 0.6rem;
+          left: 0;
+          width: 100%;
+
+          padding: 10px;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .navi.active {
+          display: flex;
+        }
+
+        .nav-links {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+
+        .nav-links a {
+          margin: 10px 0;
+        }
+
+        #company_phone {
+          color: var(--cream);
+          transition: color 0.3s ease;
+          gap: 5px;
+        }
+
+        #company_phone:hover {
+          color: var(--gold);
+        }
+      }
+
+      /* Add hover effect for phone number in desktop view */
+      #company_phone {
+        transition: color 0.3s ease;
+      }
+
+      #company_phone:hover {
+        color: var(--gold) !important;
+      }
+
+      .form-section {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, #fdf1f3 0%, #ffffff 100%);
+      }
+
+      .form-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .form-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .form-header h2 {
+        font-size: 2.5rem;
+        color: #2c2c2c;
+        margin-bottom: 1rem;
+        font-family: "Cormorant Garamond", serif;
+      }
+
+      .form-header p {
+        color: #666;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #2c2c2c;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-input:focus {
+        outline: none;
+        border-color: #be123c;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      /* Timeline Section */
+      .timeline-section {
+        padding: 5rem 0;
+        background: #ffffff;
+      }
+
+      .timeline {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .timeline-item {
+        display: flex;
+        margin-bottom: 3rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+      }
+
+      .timeline-item.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .timeline-number {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        background: #fdf1f3;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: #be123c;
+        margin-right: 2rem;
+      }
+
+      .timeline-content {
+        flex-grow: 1;
+      }
+
+      .timeline-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #2c2c2c;
+      }
+
+      .timeline-content p {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      /* Package Cards */
+      .packages {
+        padding: 5rem 0;
+        background: #fdf1f3;
+      }
+
+      .packages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .package-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 15px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .package-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .package-price {
+        font-size: 2.5rem;
+        color: #be123c;
+        margin: 1.5rem 0;
+      }
+
+      .package-features {
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0;
+      }
+
+      .package-features li {
+        margin-bottom: 1rem;
+        color: #666;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        background: #be123c;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .btn:hover {
+        background: #c34065;
+        transform: translateY(-12px) scale(1.05);
+        box-shadow: 0 5px 7px rgb(178, 68, 139);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .btn-outline {
+        background: transparent;
+        border: 2px solid #d62954;
+        color: #be123c;
+      }
+
+      .btn-outline:hover {
+        background: #be123c;
+        color: white;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline-item {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .timeline-number {
+          margin: 0 auto 1rem;
+        }
+
+        .packages-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      footer {
+        background: #000000;
+        color: var(--cream);
+        padding: 60px 0 0;
+        border-top: 1px solid rgba(212, 175, 55, 0.3);
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+      }
+
+      .footer-section {
+        margin-bottom: 30px;
+      }
+
+      .footer-section h3 {
+        color: var(--gold);
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-section h3::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--gold);
+      }
+
+      .footer-section p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: var(--cream);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .footer-links a:hover {
+        color: var(--gold);
+        transform: translateX(5px);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        color: var(--cream);
+        background: rgba(212, 175, 55, 0.1);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+      }
+
+      .social-links a:hover {
+        color: var(--gold);
+        background: rgba(212, 175, 55, 0.2);
+        transform: translateY(-3px);
+      }
+
+      .contact-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+      }
+
+      .contact-info i {
+        color: var(--gold);
+        margin-right: 10px;
+        width: 20px;
+      }
+
+      .newsletter-form {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .newsletter-form input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        background: rgba(26, 26, 26, 0.5);
+        color: var(--cream);
+        border-radius: 4px;
+      }
+
+      .newsletter-form button {
+        padding: 10px 20px;
+        background: var(--gold);
+        border: none;
+        border-radius: 4px;
+        color: var(--dark);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .newsletter-form button:hover {
+        background: transparent;
+        color: var(--gold);
+        border: 1px solid var(--gold);
+      }
+
+      .footer-bottom {
+        background: #000000;
+        padding: 20px;
+        margin-top: 40px;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+      }
+
+      .footer-bottom-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-bottom p {
+        color: rgba(255, 250, 240, 0.7);
+        font-size: 0.85rem;
+        margin: 0;
+      }
+
+      .designer-credit {
+        color: var(--cream);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .designer-credit:hover {
+        color: var(--gold);
+      }
+
+      @media (max-width: 768px) {
+        .footer-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .footer-section h3::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .social-links {
+          justify-content: center;
+        }
+
+        .contact-info {
+          justify-content: center;
+        }
+
+        .footer-links a:hover {
+          transform: translateX(0) scale(1.1);
+        }
+
+        .newsletter-form {
+          flex-direction: column;
+        }
+
+        .footer-bottom-content {
+          flex-direction: column;
+          text-align: center;
+          gap: 10px;
+        }
+      }
+
+      @media (min-width: 969px) {
+        .nav-links {
+          order: 2;
+        }
+
+        .book-now {
+          order: 3;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-content">
+        <div class="logo">
+          <img src="./assets/logo.jpg" alt="Logo" />
+        </div>
+        <div class="navi">
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="event.html">Events</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div style="gap: 20px; display: flex; align-items: center">
+            <a
+              href="tel:+9779851051578"
+              id="company_phone"
+              style="color: whitesmoke; text-decoration: none"
+            >
+              <i class="fas fa-phone"></i> 9841813349
+            </a>
+            <a href="book.html" class="book-now">Book Now</a>
+          </div>
+        </div>
+
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <br />
+    <br />
+    <br /><br />
+
+   <section class="form-section">
+  <div class="form-container">
+    <div class="form-header">
+      <h2>Order Your Furniture</h2>
+      <p>
+        Tell us what you need, and we'll make your home beautiful with our furniture.
+      </p>
+    </div>
+    <form id="furnitureForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label">First Name</label>
+          <input type="text" class="form-input" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Last Name</label>
+          <input type="text" class="form-input" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-input" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone Number</label>
+        <input type="tel" class="form-input" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Type of Furniture</label>
+        <select class="form-input">
+          <option>Sofa</option>
+          <option>Dining Table</option>
+          <option>Bed</option>
+          <option>Chair</option>
+          <option>Wardrobe</option>
+          <option>TV Unit</option>
+          <option>Office Desk</option>
+          <option>Bookshelf</option>
+          <option>Coffee Table</option>
+          <option>Stool</option>
+          <option>Custom Design</option>
+          <option>Others</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Quantity</label>
+        <input type="number" class="form-input" min="1" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Preferred Delivery Date</label>
+        <input type="date" class="form-input" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Additional Notes</label>
+        <textarea class="form-input" rows="5" placeholder="Any special requests or customization details"></textarea>
+      </div>
+      <button type="submit" class="btn">Submit Request</button>
+    </form>
+  </div>
+</section>
+
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            We are dedicated to providing exceptional services with a focus on
+            quality and customer satisfaction. Our experienced team ensures the
+            best results for all your needs.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/share/1FmmvqjY6y/?mibextid=wwXIfr"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://amp.dev/" target="_blank">
+              <i class="fab fa-google"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <div class="contact-info">
+            <p>Phone: 9841813349</p>
+          </div>
+          <div class="contact-info">
+            <p>Email: parbaevents@gmail.com</p>
+          </div>
+          <div class="contact-info">
+            <p>Address: Bharatpur-3, Nazarman Marga Narayangarh, Chitwan</p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Our Location</h3>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.0235385076876!2d84.41731167492247!3d27.691771926179165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994fb642aeefbcd%3A0xf9801549369588c3!2sParba%20banquet!5e1!3m2!1sen!2snp!4v1738051458989!5m2!1sen!2snp"
+              width="100%"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 Your Parba Events. All rights reserved.</p>
+          <p>
+            <span>Designed by</span>
+            <a
+              href="https://w3developers.com.np/"
+              target="_blank"
+              class="designer-credit"
+              >W3 Developers</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Add sticky navbar functionality
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 0) {
+          nav.classList.add("sticky");
+        } else {
+          nav.classList.remove("sticky");
+        }
+      });
+    </script>
+  </body>
+</html>
